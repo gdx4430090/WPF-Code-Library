@@ -1,0 +1,70 @@
+﻿<UserControl x:Class="ControlTest.Controls.TextBoxView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ControlTest.Controls"
+             xmlns:controls="clr-namespace:Watirx.Controls;assembly=Watirx.Controls"
+             xmlns:attachedProperties="clr-namespace:Watirx.Controls.AttachedProperties;assembly=Watirx.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="1400">
+    <StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <controls:CTextBox Width="100" Height="30" ShowWaterText="True" WaterText="请输入用户名"/>
+            <controls:CTextBox Width="100" Height="30" ShowWaterText="True" CornerRadius="15" Padding="10,0" WaterText="请输入用户名" IsEnabled="False"/>
+            <controls:CTextBox Width="100" Height="30" ShowWaterText="True" WaterText="请输入昵称" CornerRadius="0" FocusedBorderBrush="#f8ccc8" MouseMoveBorderBrush="#fadcd9" DisabledBorderBrush="LightCoral" DisabledBackground="#fceceb"/>
+            <controls:CTextBox Width="100" Height="30" ShowWaterText="True" WaterText="请输入昵称" CornerRadius="0" FocusedBorderBrush="#f8ccc8" MouseMoveBorderBrush="#fadcd9" DisabledBorderBrush="LightCoral" DisabledBackground="#fceceb"  IsEnabled="False"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBox Width="140" Height="40" Margin="3" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible">333333333333333</TextBox>
+            <TextBox Width="150" Height="30" Margin="3" attachedProperties:ControlAttachProperty.Watermark="我是水印" attachedProperties:ControlAttachProperty.CornerRadius="2"></TextBox>
+            <TextBox Width="150" Height="30" Margin="3" IsReadOnly="True" attachedProperties:ControlAttachProperty.CornerRadius="15" SnapsToDevicePixels="True" >我是只读的</TextBox>
+            <TextBox Width="150" Height="30" Margin="3" IsEnabled="False">IsEnabled="False"</TextBox>
+            <TextBox Width="150" Height="30" attachedProperties:ControlAttachProperty.Watermark="我是水印"></TextBox>
+            <TextBox Width="200" Height="30" Margin="3" attachedProperties:ControlAttachProperty.Watermark="请输入姓名" 
+                     Style="{StaticResource LabelTextBox}" attachedProperties:ControlAttachProperty.Label="姓名："></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBox Width="150" Height="30" Margin="3" attachedProperties:ControlAttachProperty.Watermark="我是水印" Style="{StaticResource ClearButtonTextBox}" IsEnabled="True"></TextBox>
+            <TextBox Width="150" Height="30" Margin="3" Style="{StaticResource ClearButtonTextBox}" IsEnabled="False">IsEnabled="False"</TextBox>
+            <TextBox Width="150" Height="30" Margin="3" Style="{StaticResource ClearButtonTextBox}" IsReadOnly="True">IsReadOnly="True"</TextBox>
+            
+        </StackPanel>
+        <StackPanel Height="40" Orientation="Horizontal" HorizontalAlignment="Left">
+            <TextBox Width="200" Height="30" Margin="3" attachedProperties:ControlAttachProperty.Watermark="查询关键词" IsEnabled="True" >
+                <attachedProperties:ControlAttachProperty.AttachContent>
+                    <ControlTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <controls:CIconButton FIcon="&#xe612;"  Style="{StaticResource CIconButton_Transparency}" IsTabStop="False" FIconMargin="0"
+                                            FIconSize="18" Margin="1,1,2,3" Cursor="Arrow"  Orientation="Horizontal"/>
+                            <controls:CIconButton FIcon="&#xe61e;"  Orientation="Horizontal" Style="{StaticResource CIconButton_Transparency}" IsTabStop="False" FIconMargin="0"
+                                            FIconSize="22" Cursor="Arrow"/>
+                        </StackPanel>
+                    </ControlTemplate>
+                </attachedProperties:ControlAttachProperty.AttachContent>
+            </TextBox>
+
+            <TextBox Width="200" Height="30" Margin="3" attachedProperties:ControlAttachProperty.Watermark="查询关键词" IsEnabled="False" Text="123">
+                <attachedProperties:ControlAttachProperty.AttachContent>
+                    <ControlTemplate>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <controls:CIconButton FIcon="&#xe61d;" Width="30" Height="25" Style="{StaticResource CIconButton_Transparency}" IsTabStop="False"
+                                            Margin="0" Cursor="Arrow" Orientation="Horizontal" VerticalContentAlignment="Center" VerticalAlignment="Center"/>
+                            <controls:CIconButton FIcon="&#xe61a;" FIconSize="22" FIconMargin="0" Style="{StaticResource CIconButton_Transparency}" IsTabStop="False" 
+                                             Cursor="Arrow" Orientation="Horizontal"/>
+                        </StackPanel>
+                    </ControlTemplate>
+                </attachedProperties:ControlAttachProperty.AttachContent>
+            </TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" >
+            <PasswordBox attachedProperties:ControlAttachProperty.Watermark="请输入密码" Margin="3" />
+            <PasswordBox attachedProperties:ControlAttachProperty.Watermark="确认密码"  Style="{StaticResource ClearButtonPasswordBox}" Margin="3" />
+            <PasswordBox attachedProperties:ControlAttachProperty.Watermark="请输入密码" Style="{StaticResource LabelPasswordBox}" attachedProperties:ControlAttachProperty.Label="密码：" Margin="3" />
+            <PasswordBox attachedProperties:ControlAttachProperty.Watermark="请输入密码" Style="{StaticResource LabelClearButtonPasswordBox}" attachedProperties:ControlAttachProperty.Label="密码：" Margin="3"/>
+            <PasswordBox IsEnabled="False" Password="111" Margin="3" />
+
+        </StackPanel>
+    </StackPanel>
+</UserControl>
+

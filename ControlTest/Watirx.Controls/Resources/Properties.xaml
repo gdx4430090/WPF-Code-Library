@@ -1,0 +1,88 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <FontFamily x:Key="FontFamily" >Microsoft YaHei,Tahoma</FontFamily>
+    
+    <sys:Double x:Key="MicroFontSize">12</sys:Double>
+    <sys:Double x:Key="FontSize">13</sys:Double>
+    <sys:Double x:Key="NormalFontSize">14</sys:Double>
+    <sys:Double x:Key="LargeFontSize">16</sys:Double>
+    <sys:Double x:Key="LargeExFontSize">20</sys:Double>
+
+    <SolidColorBrush x:Key="TextForeground" Color="#FF333333"/>
+    <SolidColorBrush x:Key="TextBackground" Color="#FFFFFFFF"/>
+    <SolidColorBrush x:Key="TextSelectionBrush" Color="#8F8787"/>
+
+    <Style TargetType="{x:Type TextElement}">
+        <Setter Property="FontFamily" Value="{DynamicResource FontFamily}"/>
+        <Setter Property="FontSize" Value="{DynamicResource NormalFontSize}"/>
+        <Setter Property="Foreground" Value="{DynamicResource TextForeground}"/>
+    </Style>
+    <Style TargetType="{x:Type TextBlock}">
+        <Setter Property="FontFamily" Value="{DynamicResource FontFamily}"/>
+        <Setter Property="FontSize" Value="{DynamicResource NormalFontSize}"/>
+        <Setter Property="Foreground" Value="{DynamicResource TextForeground}"/>
+    </Style>
+
+    <!--region Button-->
+    <SolidColorBrush x:Key="ButtonBackground" Color="#FF72D7E5"/>
+    <SolidColorBrush x:Key="ButtonForeground" Color="#f0f0f0"/>
+    
+    <SolidColorBrush x:Key="ButtonPressedBackground" Color="White"/>
+    <SolidColorBrush x:Key="ButtonPressedForeground" Color="#FF5F5F5F"/>
+    
+    <SolidColorBrush x:Key="ButtonMouseOverBackground" Color="#FF36B1C2"/>
+    <SolidColorBrush x:Key="ButtonMouseOverForeground" Color="White"/>
+
+    <SolidColorBrush x:Key="ButtonDisableForeground" Color="#aaaaaa"/>
+    <SolidColorBrush x:Key="ButtonDisableBackground" Color="#FF5F5F5F"/>
+
+    <SolidColorBrush x:Key="ButtonBorderBrush" Color="#999999"/>
+    <SolidColorBrush x:Key="BorderBackground" Color="#e0e0e0"/>
+
+    <sys:Double x:Key="ButtonWidth">100</sys:Double>
+    <sys:Double x:Key="ButtonHeight">30</sys:Double>
+
+    <SolidColorBrush x:Key="LinkForeground" Color="#FF72D7E5"/>
+    <SolidColorBrush x:Key="LinkMouseOverForeground" Color="#FF72D7E5"/>
+
+    <SolidColorBrush x:Key="MouseOverForeground" Color="#FF343438"></SolidColorBrush>
+    <SolidColorBrush x:Key="PressedForeground" Color="#FF2b2b2e"></SolidColorBrush>
+    <!--#endregion-->
+
+    <!-- #reigon TextBox -->
+    <SolidColorBrush x:Key="TextBox.Static.Border" Color="#FFABAdB3"/>
+    <SolidColorBrush x:Key="TextBox.Static.Background" Color="#FFFFFFFF"/>
+
+    <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="#FF7EB4EA"/>
+
+    <SolidColorBrush x:Key="TextBox.Focus.Border" Color="#FF569DE5"/>
+
+    <SolidColorBrush x:Key="TextBox.Disabled.Border" Color="#FFa1a3aa"/>
+    <SolidColorBrush x:Key="TextBox.Disabled.Background" Color="#FFe9e9eb"/>
+    <SolidColorBrush x:Key="TextBox.Disabled.Foreground" Color="#FF666666"/>
+
+    <SolidColorBrush x:Key="TextBox.Watermask.Foreground" Color="#FF808080"/>
+
+    <!--原输入框-->
+    <SolidColorBrush x:Key="ControlBorderBrush" Color="#999C9F"></SolidColorBrush>
+    <SolidColorBrush x:Key="MouseOverBorderBrush" Color="#F6D1D1"></SolidColorBrush>
+    <SolidColorBrush x:Key="FocusBackground" Color="#365080"></SolidColorBrush>
+    <SolidColorBrush x:Key="FocusBorderBrush" Color="#EBCECE"></SolidColorBrush>
+    <!--TextBox默认Label颜色-->
+    <SolidColorBrush x:Key="TextLabelBackground" Color="#FFFFFF"></SolidColorBrush>
+
+    <!--透明度-->
+    <sys:Double x:Key="DisableOpacity">0.5</sys:Double>
+    <sys:Double x:Key="ReadonlyOpacity">0.88</sys:Double>
+    <sys:Double x:Key="WatermarkOpacity">0.4</sys:Double>
+
+    <!-- #endregion -->
+
+    <!--ScrollBar-->
+    <SolidColorBrush x:Key="ScrollBarForeround" Color="#877F7F"></SolidColorBrush>
+    <SolidColorBrush x:Key="ScrollBarBackground" Color="#3E3E42"></SolidColorBrush>
+
+
+</ResourceDictionary>

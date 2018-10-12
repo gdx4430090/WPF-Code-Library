@@ -1,0 +1,71 @@
+﻿<UserControl x:Class="ControlTest.Controls.ButtonView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ControlTest"
+             xmlns:controls="clr-namespace:Watirx.Controls;assembly=Watirx.Controls"
+             mc:Ignorable="d" Background="Black"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <StackPanel >
+        
+        <StackPanel Orientation="Horizontal">
+            <controls:CButton Content="列表"  BorderThickness="0" 
+                              Foreground="White" BorderBrush="#ffffff" Background="#f44133"
+                              MouseOverBackground="#ec483b" MouseOverBorderBrush="Aqua" MouseOverForeground="Aquamarine"
+                              PressedBackground="#db564c" PressedBorderBrush="Blue" PressedForeground="Yellow"
+                              DisabledBackground="#998f8e" DisabledForeground="#aaaaaa" DisabledBorderBrush="Blue"/>
+
+            <controls:CButton Content="创建"  BorderThickness="1" 
+                              Foreground="White" BorderBrush="#ffffff" Background="#f44133"
+                              MouseOverBackground="#ec483b" MouseOverBorderBrush="Aqua" MouseOverForeground="Aquamarine"
+                              PressedBackground="#db564c" PressedBorderBrush="Blue" PressedForeground="Yellow"
+                              DisabledBackground="#998f8e" DisabledForeground="#aaaaaa" DisabledBorderBrush="Blue"/>
+
+            <controls:CButton Content="删除" IsEnabled="False" BorderThickness="1" 
+                              Foreground="White" Background="#f44133" 
+                              MouseOverBackground="#ec483b"
+                              PressedBackground="#db564c" 
+                              DisabledBackground="#666666" DisabledBorderBrush="White" DisabledForeground="#aaaaaa"/>
+
+            <controls:CButton Content="修改"  BorderThickness="1" 
+                              Foreground="White" BorderBrush="#ffffff" Background="{x:Null}"
+                              MouseOverBackground="{x:Null}" MouseOverBorderBrush="Aqua" MouseOverForeground="Aquamarine"
+                              PressedBackground="{x:Null}" PressedBorderBrush="Blue" PressedForeground="Yellow"
+                              DisabledBackground="{x:Null}" DisabledForeground="#aaaaaa" DisabledBorderBrush="Blue"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal">
+            <controls:CIconButton FIcon="&#xe603;" Margin="3" Orientation="Horizontal" FIconSize="25" Foreground="DarkBlue" BorderThickness="1" BorderBrush="LightBlue">系统换转</controls:CIconButton>
+            <controls:CIconButton FIcon="&#xe604;" Margin="3" Width="140" Height="80" Background="#771C79" MouseOverBackground="#F20BA0" Click="FButton_Click" >WaitingBox</controls:CIconButton>
+            <controls:CIconButton FIcon="&#xe606;" Margin="3" Width="140" Height="80" Background="#12B512" IsDefault="True" MouseOverBackground="#08EE08" Click="FButton_Click_WindowBase">WindowBase</controls:CIconButton>
+
+            <controls:CIconButton FIcon="&#xe613;" Margin="5,0,0,0"  Height="80" CornerRadius="16,0,0,16" AllowsAnimation="True" Click="FButton_Click_Info">Info</controls:CIconButton>
+            <controls:CIconButton FIcon="&#xe614;" CornerRadius="0" Height="80" Click="FButton_Click_Question">Question</controls:CIconButton>
+            <controls:CIconButton FIcon="&#xe615;" CornerRadius="0" Height="80" Click="FButton_Click_Warning">Warining</controls:CIconButton>
+            <controls:CIconButton FIcon="&#xe61f;" CornerRadius="0,16,16,0" Height="80" AllowsAnimation="True" Click="FButton_Click_Error" IsEnabled="False">Error</controls:CIconButton>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal">
+            <controls:CImgButton Content="保存" FImageSize="15" FImageMargin="3" Width="80" Height="66" HorizontalContentAlignment="Center"
+                                 ImageSource="/Watirx.Controls;component/Resources/icon_Normal/保存.png"
+                                 MouseMoveImageSource="/Watirx.Controls;component/Resources/icon_MouseOverPressed/保存.png"
+                                 PressedImageSource="/Watirx.Controls;component/Resources/icon_MouseOverPressed/保存.png"
+                                 DisabledImageSource="/Watirx.Controls;component/Resources/icon_Disabled/保存.png"/>
+
+            <controls:CImgButton Content="菜单" Margin="10,0" Width="80" Height="66" HorizontalContentAlignment="Center" IsEnabled="False"
+                                 ImageSource="/Watirx.Controls;component/Resources/icon_Normal/图库案例.png" 
+                                 MouseMoveImageSource="/Watirx.Controls;component/Resources/icon_MouseOverPressed/图库案例.png"
+                                 PressedImageSource="/Watirx.Controls;component/Resources/icon_MouseOverPressed/图库案例.png"
+                                 DisabledImageSource="/Watirx.Controls;component/Resources/icon_Disabled/图库案例.png"/>
+
+            <controls:CImgButton Content="保存" FImageSize="22" FImageMargin="5,0" Width="100" Height="30" Orientation="Horizontal" CornerRadius="10" Padding="3,5"
+                                 Background="Chocolate" MouseOverBackground="Bisque" PressedBackground="AntiqueWhite" DisabledBackground="LightGray"
+                                 ImageSource="/Watirx.Controls;component/Resources/icon_Normal/全选.png"
+                                 MouseMoveImageSource="/Watirx.Controls;component/Resources/icon_MouseOverPressed/全选.png"
+                                 PressedImageSource="/Watirx.Controls;component/Resources/icon_MouseOverPressed/全选.png"
+                                 DisabledImageSource="/Watirx.Controls;component/Resources/icon_Disabled/全选.png"/>
+        </StackPanel>
+
+    </StackPanel>
+</UserControl>
